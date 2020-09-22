@@ -1,0 +1,20 @@
+{% extends 'base.template.html' %}
+
+{% block content %}
+<table class="table">
+<thead>
+<tr>
+    <th>Title</th>
+    <th>Author</th>
+</tr>
+</thead>
+<tbody>
+    {% for each_book in database %}
+    <tr> 
+        <td>{{ each_book.title }}</td>
+        <td>{{ each_book.author }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+{% endblock %}
